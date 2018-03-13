@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
+  firstName : string ="Jagan";
+  lastName : string ="Mode";
+  gender : string ="Male";
+  age : number =24;
+
   constructor() { }
 
   ngOnInit() {
