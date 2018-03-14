@@ -4,12 +4,28 @@ import {Component} from "@angular/core"
   selector : `my-app`,
   template :`
              <div>
-             <h1>{{PageHeader}}</h1>
+             <h1>{{getFullname()}}</h1>
+          <img src="http://www.wtastudios.com/{{imagePath}}">
+        
              <app-employee></app-employee>
+
+             <button disabled="{{isDisabled}}">Click Me</button>
+             <span bind-innerHtml="PageHeader"></span>
              </div>
 
               `
 })
 export class AppComponent{
-  PageHeader: string ="Emplotee Details";
+  PageHeader: string ="Employee Details";
+
+  imagePath: string ="files/images/team/jagan.jpg";
+
+  firstName : string ="jagan";
+ lastName : string ="naik";
+
+ getFullname() : string {
+   return this.firstName + ' ' + this.lastName;
+ }
+
+ isDisabled : boolean=true ;
 }
