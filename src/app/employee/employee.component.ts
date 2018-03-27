@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  firstName : string ="Jagan";
-  lastName : string ="Mode";
-  gender : string ="Male";
-  age : number =24;
+  columnSpan: number = 2;
+  firstName: string = 'Tom';
+  lastName: string = 'Hopkins';
+  gender: string = 'Male';
+  age: number = 20;
+  showDetails: boolean = false;
 
+  toggleDetails(): void {
+      this.showDetails = !this.showDetails;
+  }
   constructor() { }
 
   ngOnInit() {

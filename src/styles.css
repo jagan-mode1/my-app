@@ -9,7 +9,9 @@ table {
 td {
     border: 1px solid black;
 }
-
+thead{
+    border: 1px solid black;
+}
 h1{color: #369;}
 
 img{
